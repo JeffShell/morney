@@ -94,9 +94,9 @@
         background: #fb6938;
         font-size: 25px;
         border: none;
-        width: 100%;
+        width: 90%;
         height: 50px;
-        margin-top: 50%;
+        margin: 50% 0 0;
         border-radius: 50px;
 
       }
@@ -111,6 +111,9 @@
         float: left;
         background: transparent;
         border: none;
+        &.remove {
+          font-size: 25px;
+        }
       }
     }
     
