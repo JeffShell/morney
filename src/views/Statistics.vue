@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Tabs class-prefix="type" :data-source="recordTypeList" :value.sync="type"/>
-    <ol v-if="groupedList.length>0">
+    <ol class="main-box" v-if="groupedList.length>0">
       <li v-for="(group,index) in groupedList" :key="index">
         <h3 class="title">{{ beautify(group.title) }}<span>￥{{ group.total }}</span></h3>
         <ol>
@@ -101,7 +101,7 @@ export default class Statistics extends Vue {
 ::v-deep {
 .tabs {
   border-radius: 30px;
-  margin: 10px 30px 0;
+  margin: 10px 30px;
   background: #fff;
   display: flex;
   text-align: center;
@@ -140,10 +140,15 @@ export default class Statistics extends Vue {
 .title {
   @extend %item
 }
-
-.record {
-  background: white;
-  @extend %item;
+.main-box {
+  border: 1px solid #333;
+  border-radius: 20px;
+  margin: 0 10px;
+  overflow: hidden;
+  .record {
+    background: white;
+    @extend %item;
+  }
 }
 
 .notes {
