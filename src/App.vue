@@ -17,6 +17,7 @@ body {
   background: #f1edea;
   @media(min-width: 478px) {
     &{
+      position: relative;
       width: 478px;
       margin: 0 auto;
       border: 1px solid #999;
