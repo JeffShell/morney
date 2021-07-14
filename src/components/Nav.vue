@@ -29,6 +29,7 @@ name: "Nav"
     display: flex;
     flex-direction: row;
     font-size: 12px;
+    background-color: #f5f5f5;
     > .item {
       padding: 2px 0;
       width: 33.33333%;

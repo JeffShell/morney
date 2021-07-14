@@ -14,7 +14,7 @@ body {
   font-family: $font-hei;
   font-size: 16px;
   line-height: 1.5;
-  background: #f5f5f5;
+  background: #f1edea;
   @media(min-width: 478px) {
     &{
     width: 478px;
