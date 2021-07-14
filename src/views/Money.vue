@@ -40,14 +40,16 @@ export default class Money extends Vue {
     this.record.notes = value;
   }
   saveRecord() {
-    this.$store.commit('createRecord',this.record);
     if(!this.record.tags || this.record.tags.length === 0){
       return window.alert('请至少选择一个标签');
     }
     if(this.$store.state.createRecordError === null) {
+      console.log(this.$store.state.createRecordError);
+      
       window.alert('已保存');
       this.record.notes = "";
     }
+    this.$store.commit('createRecord',this.record);
   }
 }
 </script>
