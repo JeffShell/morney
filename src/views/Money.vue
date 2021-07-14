@@ -57,6 +57,7 @@ export default class Money extends Vue {
   flex-direction: column-reverse;
 }
 .notes {
+  font-size: 20px;
   padding: 12px 0;
 }
 </style>

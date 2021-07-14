@@ -15,5 +15,11 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background: #f5f5f5;
+  @media(min-width: 478px) {
+    &{
+    width: 478px;
+    margin: 0 auto;
+    }
+  }
 }
 </style>
