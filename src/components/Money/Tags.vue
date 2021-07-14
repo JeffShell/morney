@@ -50,7 +50,6 @@ export default class Tags extends mixins(TagHelper) {
       $bg:#e8e4e1;
       $h: 40px;
       background: $bg;
-      // width: $h;
       height: $h;
       line-height: $h;
       text-align: center;

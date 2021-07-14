@@ -36,7 +36,7 @@
 </script>
 <style lang="scss" scoped>
 .tabs {
-  background: #C4C4C4;
+  background: #fff;
   display: flex;
   text-align: center;
   font-size: 24px;
@@ -48,14 +48,25 @@
     align-items: center;
     position: relative;
     &.selected::after {
+      background: #333;
+      width: 80%;
+      height: 4px;
       content: '';
       position: absolute;
       bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: #333;
+      left: 50%;
+      transform: translateX(-50%);
     }
+    &.selected::before {
+      background: #fc926a;
+      width: 80%;
+      height: 4px;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    } 
   }
 }
 </style>
