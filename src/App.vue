@@ -17,8 +17,9 @@ body {
   background: #f1edea;
   @media(min-width: 478px) {
     &{
-    width: 478px;
-    margin: 0 auto;
+      width: 478px;
+      margin: 0 auto;
+      border: 1px solid #999;
     }
   }
 }

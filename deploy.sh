@@ -21,6 +21,6 @@ git branch -M main
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
- git push -f git@gitee.com:jeffshell/mccounting-items.git main:gh-pages
-
+git remote add origin git@github.com:JeffShell/money-test.git
+git push -u origin main
 cd -

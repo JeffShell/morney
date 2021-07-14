@@ -33,9 +33,11 @@
     output = this.value.toString();
     inputContent(event: MouseEvent){
       const button = (event.target as HTMLButtonElement);
+      
       const input = button.textContent!;
       if(this.output.length === 16){ return; }
       if(this.output === '0'){
+        
         if('0123456789'.indexOf(input) >= 0){
           this.output = input;
         } else {
@@ -43,6 +45,7 @@
         }
         return;
       }
+      
       if (this.output.indexOf('.') >= 0 && input === '.') {
         return;
       }
@@ -60,9 +63,13 @@
     }
     ok(){
       const number = parseFloat(this.output)
-      this.$emit('update:value', number);
-      this.$emit('submit', number);
-      this.output = '0';
+      if(number !== 0){
+        this.$emit('update:value', number);
+        this.$emit('submit', number);
+        this.output = '0';
+      } else {
+        alert("请输入合法的数字")
+      }
     }
   }
 </script>
