@@ -99,17 +99,30 @@ export default class Statistics extends Vue {
   text-align: center;
 }
 ::v-deep {
-  .type-tabs-item {
-    background: #c4c4c4;
-
-    &.selected {
-      background: white;
-
-      &::after {
-        display: none;
-      }
+.tabs {
+  border-radius: 30px;
+  margin: 10px 30px 0;
+  background: #fff;
+  display: flex;
+  text-align: center;
+  font-size: 24px;
+  overflow: hidden;
+  &-item {
+    width: 50%;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &.selected{
+      background: #fc926a;
     }
+    &.selected::after,
+    &.selected::before {
+      display: none;
+    } 
   }
+}
 }
 
 .interval-tabs-item {
