@@ -9,7 +9,7 @@
       </router-link>
     </div>
     <div class="createTag-wrapper">
-      <Button class="createTag" @click="createTag">新建标签</Button>
+      <Button class="createTag" @click="createTag">+</Button>
     </div>
   </Layout>
 </template>
@@ -36,15 +36,18 @@ export default class Labels extends mixins(TagHelper){
 
 <style lang="scss" scoped>
 .tags {
-  background: white;
   font-size: 16px;
-  padding-left: 16px;
+  padding: 16px;
   > .tag {
+    background: #fff;
     min-height: 44px;
+    margin-bottom: 16px;
+    padding-left: 15px;
+    border: 1px solid #343434;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #e6e6e6;
     svg {
       width: 18px;
       height: 18px;
@@ -56,11 +59,15 @@ export default class Labels extends mixins(TagHelper){
 .createTag {
   background: #767676;
   color: white;
-  border-radius: 4px;
+  border-radius: 50%;
+  font-size: 40px;
   border: none;
-  height: 40px;
-  padding: 0 16px;
+  height: 60px;
+  width: 60px;
   &-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 60px;
     text-align: center;
     padding: 16px;
     margin-top: 44-16px;
